@@ -1,0 +1,99 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    background-color: rgb(196, 226, 253);
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url(Nunito-Regular.ttf);
+}
+@font-face {
+    font-family: PlayfairDisplay;
+    src: url(PlayfairDisplay-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Playfair;
+    src: url(PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+.quotes h1 {color: #1683dc;font-family: 'Playfair';}
+.author {font-family: 'PlayfairDisplay';position: relative;font-weight: bold;}
+.author::before {
+    position: absolute;
+    background-color: #1683dc;
+    height: 2px;
+    left: -26px;
+    top: 11px;
+    width: 20px;
+    content: '';
+}
+.author::after {
+    position: absolute;
+    background-color: #1683dc;
+    height: 2px;
+    right: -26px;
+    top: 11px;
+    width: 20px;
+    content: '';
+}
+
+.quotes {
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    margin: 100px auto 30px;
+    padding: 25px 35px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, .2);
+}
+.quotes blockquote {
+    display: block;
+    color: #333;
+    line-height: 1.6em;
+    margin: 40px 0;
+    font-family: 'PlayfairDisplay';
+    font-size: 18px;
+    position: relative;
+}
+blockquote::before {
+    position: absolute;
+    color: #1683dc;
+    height: 2px;
+    left: 6px;
+    top: -12px;
+    font-size: 30px;
+    width: 20px;
+    content: '❝';
+}
+
+.quotes button {
+    background-color: rgb(22, 131, 220);
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    outline: 0;
+    display: inline-block;
+    margin: 22px 0 10px 0;
+    width: 130px;
+    border: 2px solid transparent;
+}
+
+/* copyright */
+.copyright {
+    text-align: center;
+    font-size: small;
+    color: #333;
+    margin: 20px 0;
+}
+
+@media(width <= 567px) {
+    .quotes {
+        width: 68%;
+    max-width: unset;
+    }
+    blockquote::before {left: 0;}
+}
